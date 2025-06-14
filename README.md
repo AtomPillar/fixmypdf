@@ -1,31 +1,31 @@
 
-# 📄 FixMyPDF – Финална версия
+# 📄 FixMyPDF – Final version
 
-Модерно уеб приложение за редактиране и обработка на PDF файлове с Freemium модел, Stripe плащане и OCR.
-
----
-
-## 🚀 Функционалности
-
-- 📥 Качване и визуализация на PDF
-- ↻ Завъртане и 🗑️ изтриване на страници
-- ✍️ Подпис и позициониране с мишка/пръст
-- 💾 Генериране на нов PDF
-- 🧠 OCR + експорт към Word (.docx)
-- 💳 Stripe Checkout (платен PRO достъп)
-- 🔓 Freemium: 3 действия на ден без вход
-- ✅ Success Page – активиране на PRO след плащане
+A modern web application for editing and processing PDF files with a Freemium model, Stripe payment and OCR.
 
 ---
 
-## 🛠️ Инсталация (локално)
+## 🚀 Features
+
+- 📥 Upload and preview PDF
+- ↻ Rotate and 🗑️ delete pages
+- ✍️ Sign and position with mouse/finger
+- 💾 Generate new PDF
+- 🧠 OCR + export to Word (.docx)
+- 💳 Stripe Checkout (paid PRO access)
+- 🔓 Freemium: 3 actions per day without login
+- ✅ Success Page – activate PRO after payment
+
+---
+
+## 🛠️ Installation (local)
 
 ```bash
 npm install
 npm run dev
 ```
 
-Или с Yarn:
+Or with Yarn:
 
 ```bash
 yarn
@@ -34,48 +34,48 @@ yarn dev
 
 ---
 
-## 📂 Структура
+## 📂 Structure
 
-| Папка/Файл                  | Описание                                  |
-|----------------------------|--------------------------------------------|
-| `FixMyPDF.jsx`             | Главният компонент                        |
-| `StripeButton.jsx`         | Stripe Checkout бутон                     |
-| `create-checkout-session.js` | API за създаване на Stripe сесия         |
-| `SuccessPage.jsx`          | Страница след успешно плащане             |
-| `ui-preview.html`          | Примерни UI бутони                        |
-
----
-
-## 💳 Stripe конфигурация
-
-1. Създай Stripe акаунт: https://dashboard.stripe.com
-2. Замени:
-   - `sk_test_YourSecretKey` в `create-checkout-session.js`
-   - `success_url` и `cancel_url` със свои URL-и
-3. Деплой с Vercel, Netlify или други
+| Folder/File | Description |
+|----------------------------|--------------------------------------|
+| `FixMyPDF.jsx` | The main component |
+| `StripeButton.jsx` | Stripe Checkout button |
+| `create-checkout-session.js` | Stripe session creation API |
+| `SuccessPage.jsx` | Page after successful payment |
+| `ui-preview.html` | Sample UI buttons |
 
 ---
 
-## ☁️ Деплой на Vercel (препоръчително)
+## 💳 Stripe configuration
 
-1. Качи проекта в GitHub
-2. Отиди на: https://vercel.com/import
-3. Влез с GitHub акаунт и избери проекта
-4. Настройки:
-   - Framework: **React** или **Next.js**
-   - Environment:
-     - `STRIPE_SECRET_KEY=sk_test_...`
+1. Create a Stripe account: https://dashboard.stripe.com
+2. Replace:
+- `sk_test_YourSecretKey` in `create-checkout-session.js`
+- `success_url` and `cancel_url` with your own URLs
+3. Deploy with Vercel, Netlify or others
 
 ---
 
-## ✅ Freemium/PRO логика
+## ☁️ Deploy on Vercel (recommended)
 
-- Freemium: до 3 действия на ден
-- След успешно плащане: `localStorage.setItem('fixmypdf_pro', 'true')`
+1. Upload the project to GitHub
+2. Go to: https://vercel.com/import
+3. Log in with your GitHub account and select the project
+4. Settings:
+- Framework: **React** or **Next.js**
+- Environment:
+- `STRIPE_SECRET_KEY=sk_test_...`
 
 ---
 
-## 🧠 OCR Езици
+## ✅ Freemium/PRO logic
+
+- Freemium: up to 3 actions per day
+- After successful payment: `localStorage.setItem('fixmypdf_pro', 'true')`
+
+---
+
+## 🧠 OCR Languages
 
 ```js
 Tesseract.recognize(file, 'eng+bul');
@@ -83,14 +83,17 @@ Tesseract.recognize(file, 'eng+bul');
 
 ---
 
-## 📌 Забележка
+## 📌 Note
 
-Това е MVP версия. За продакшън се препоръчва:
-- Проверка на Stripe Webhooks за сигурност
-- Бекенд за управление на PRO достъпа
+This is an MVP version. For production it is recommended to:
+- Check Stripe Webhooks for security
+- Backend for PRO access management
 
 ---
 
-## 📧 Контакт
+## 📧 Contact
 
-Изградено от FixMyPDF Creator · 2025
+Built by AtomPillar by Georgi Varbanov / Creator · 2025
+=======
+# fixmypdf
+3986475f722978b8d21dfac93e79d7f21d1742da
