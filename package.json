@@ -1,0 +1,22 @@
+{
+  "name": "fixmypdf",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-pdf": "^7.0.0",
+    "pdf-lib": "^1.17.1",
+    "react-signature-canvas": "^1.0.6",
+    "tesseract.js": "^4.0.2",
+    "docx": "^8.0.3"
+  },
+  "devDependencies": {
+    "vite": "^5.2.0"
+  }
+}
