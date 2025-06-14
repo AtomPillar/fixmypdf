@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 139e85c5f1623ff83f2ebf0a4007b5789aa71e1c
 05eca8c668072af566a6048713108509ce438908
 # FixMyPDF – by AtomPillar
 
@@ -46,14 +49,21 @@ npm run dev
 ```
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 139e85c5f1623ff83f2ebf0a4007b5789aa71e1c
 05eca8c668072af566a6048713108509ce438908
 ## 🔐 Environment Variables (.env)
 See `.env.example` for required keys
 
 ## 🧾 License
+<<<<<<< HEAD
 
 MIT © 2025 Georgi Varbanov / AtomPillar
 
+=======
+>>>>>>> 139e85c5f1623ff83f2ebf0a4007b5789aa71e1c
 MIT © 2025 Georgi Varbanov / AtomPillar
 
 Or with Yarn:
