@@ -1,5 +1,5 @@
-// ✅ FixMyPDF компонент с брояч на безплатни употреби и проверка за PRO
 
+// ✅ Централен FixMyPDF с интегрирана PRO логика и лимити за всички функции
 import React, { useEffect, useState } from 'react';
 import { createClient } from '@supabase/supabase-js';
 import StripeButton from './components/StripeButton';
@@ -20,9 +20,7 @@ const FixMyPDF = () => {
     const usageKey = 'pdf_usage_' + today;
     const count = parseInt(localStorage.getItem(usageKey) || '0');
     setUsesToday(count);
-    if (count >= 1 && !isPro) {
-      setLimitReached(true);
-    }
+    if (count >= 1 && !isPro) setLimitReached(true);
 
     const checkSession = async () => {
       const { data: { session } } = await supabase.auth.getSession();
@@ -56,22 +54,22 @@ const FixMyPDF = () => {
     }
   };
 
-  const handlePDFAction = () => {
-    if (!isPro && limitReached) {
-      alert('Използвахте дневния лимит. Моля, отключете PRO или опитайте утре.');
-      return;
-    }
-
-    // ... логика за PDF обработка
-
+  const registerUsage = () => {
     const today = new Date().toISOString().split('T')[0];
     const usageKey = 'pdf_usage_' + today;
     const count = parseInt(localStorage.getItem(usageKey) || '0') + 1;
     localStorage.setItem(usageKey, count.toString());
     setUsesToday(count);
-    if (count >= 1 && !isPro) {
-      setLimitReached(true);
+    if (count >= 1 && !isPro) setLimitReached(true);
+  };
+
+  const handleFeature = (featureName) => {
+    if (!isPro && limitReached) {
+      alert('Изчерпан е безплатният лимит за днес. Моля, отключи PRO.');
+      return;
     }
+    alert(`Изпълняваме: ${featureName}`);
+    registerUsage();
   };
 
   return (
@@ -84,19 +82,20 @@ const FixMyPDF = () => {
         </div>
       )}
 
-      {!isPro && !limitReached && (
-        <button
-          onClick={handlePDFAction}
-          className="bg-blue-600 text-white px-6 py-2 rounded shadow mb-4"
-        >
-          Използвай безплатно
+      <div className="space-y-3">
+        <button onClick={() => handleFeature('Генериране на PDF')} className="bg-blue-600 text-white px-6 py-2 rounded shadow w-full">
+          Генериране на PDF
         </button>
-      )}
+        <button onClick={() => handleFeature('OCR')} className="bg-green-600 text-white px-6 py-2 rounded shadow w-full">
+          OCR (разпознаване на текст)
+        </button>
+        <button onClick={() => handleFeature('Конвертиране в Word')} className="bg-indigo-600 text-white px-6 py-2 rounded shadow w-full">
+          Конвертиране в Word
+        </button>
+      </div>
 
       {limitReached && !isPro && (
-        <div className="text-red-600 mb-4">
-          Достигнат е лимитът за днес. Отключи неограничен достъп:
-        </div>
+        <div className="text-red-600 mt-4 mb-2">Достигнат е лимитът за днес.</div>
       )}
 
       {!isPro && <StripeButton />}
@@ -105,3 +104,4 @@ const FixMyPDF = () => {
 };
 
 export default FixMyPDF;
+
