@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 05eca8c668072af566a6048713108509ce438908
+05eca8c668072af566a6048713108509ce438908
 # FixMyPDF – by AtomPillar
 
 A freemium web app for editing, converting, and generating invoices and documents.  
@@ -16,8 +13,7 @@ Built with Vite + React + Tailwind CSS + Supabase + Stripe.
 - i18next (multilingual)
 
 ## 🚀 Development
-<<<<<<< HEAD
-=======
+
 
 
 # 📄 FixMyPDF – Final version
@@ -41,23 +37,19 @@ A modern web application for editing and processing PDF files with a Freemium mo
 
 ## 🛠️ Installation (local)
 065cc3baa44c7da732827db4b10b412a72fe31c
->>>>>>> 05eca8c668072af566a6048713108509ce438908
+05eca8c668072af566a6048713108509ce438908
 ```bash
 npm install
 npm run dev
 ```
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 05eca8c668072af566a6048713108509ce438908
+
+05eca8c668072af566a6048713108509ce438908
 ## 🔐 Environment Variables (.env)
 See `.env.example` for required keys
 
 ## 🧾 License
-<<<<<<< HEAD
-MIT © 2025 Georgi Varbanov / AtomPillar
-=======
 MIT © 2025 Georgi Varbanov / AtomPillar
 
 Or with Yarn:
@@ -132,5 +124,5 @@ Built by AtomPillar by Georgi Varbanov / Creator · 2025
 
 # fixmypdf
 3986475f722978b8d21dfac93e79d7f21d1742da
->>>>>>> 1065cc3baa44c7da732827db4b10b412a72fe31c
->>>>>>> 05eca8c668072af566a6048713108509ce438908
+1065cc3baa44c7da732827db4b10b412a72fe31c
+05eca8c668072af566a6048713108509ce438908
